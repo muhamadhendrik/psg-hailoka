@@ -1,0 +1,187 @@
+<script setup lang="ts">
+import { ref } from 'vue'
+import Dialog from 'primevue/dialog'
+import { Icon } from '@iconify/vue'
+import { Button } from 'primevue'
+import Dropdown from "primevue/dropdown";
+
+const visible = ref(true)
+
+const roles = [
+  {
+    label: 'Bussines Center',
+    value: 2,
+    description: 'Open: 04:00 - 23:59'
+  },
+  {
+    label: 'Laundry',
+    value: 4,
+    description: 'Closed: 06:00 - 18:00'
+  },
+  {
+    label: 'Restauran A',
+    value: 3,
+    description: 'Curently unuvailable'
+  }
+]
+
+const form = ref({
+  roleId: null,
+})
+
+// const onDecline = () => {
+//   console.log('Call declined')
+//   visible.value = false
+// }
+// const onPickup = () => {
+//   console.log('Call picked up')
+//   visible.value = false
+// }
+// const onTransfer = () => {
+//   console.log('Transfer clicked')
+// }
+
+</script>
+
+
+
+<template>
+  <Dialog
+    v-model:visible="visible"
+    modal
+    dismissableMask
+    :pt="{
+        header: { class: 'pickup-dialog-header' }
+    }"
+    contentClass="p-0!"
+    :closable="false"
+    :style="{ width: '400px', borderRadius: '12px', overflow: 'hidden', padding: '0' }"
+    class="pickup-dialog"
+  >
+    <!-- Header -->
+    <template #header>
+
+      <div class="w-full bg-[#d86734] text-white flex flex-col p-4 rounded-t-lg">
+
+        <div class="flex justify-between items-center border-b py-4">
+          <span class="text-lg font-medium">Pick Up</span>
+          <Icon icon="mdi:close" class="cursor-pointer size-6" @click="visible = false" />
+        </div>
+        
+        <div class="flex items-center mt-4">
+          <div class="rounded-full bg-transparent border-2 bg-opacity-20 p-3 mr-4">
+            <Icon icon="mdi:bell-outline" width="24" height="24" />
+          </div>
+
+          <div>
+            <div class="font-semibold text-lg">Alan Maker</div>
+            <div class="text-sm opacity-90">Ringing...</div>
+          </div>
+        </div>
+      </div>
+
+    </template>
+
+    <!-- Body -->
+    <!-- <div class="bg-white p-6 flex flex-col items-center space-y-6">
+
+      <div class="flex items-center justify-between w-full px-4">
+
+        <div class="flex flex-col items-center space-y-1">
+          <div class="bg-cyan-100 rounded-full p-3">
+            <Icon icon="mdi:silverware-fork-knife" class="text-cyan-600" width="20" height="20" />
+          </div>
+        </div>
+
+        <div class="border-t border-dashed border-cyan-200 w-full"></div>
+
+        <div class="flex flex-col items-center space-y-1 opacity-60">
+          <div class="bg-cyan-100 rounded-full p-3">
+            <Icon icon="mdi:account-outline" class="text-cyan-600" width="20" height="20" />
+          </div>
+        </div>
+
+      </div>
+
+      <div class="flex items-center justify-between w-full px-4">
+        <span class="text-sm font-medium">Restaurant</span>
+        <span class="text-sm font-medium">Waiting for answer...</span>
+      </div>
+
+      
+      <div class="flex justify-center space-x-6 mt-9">
+
+        <button class="flex flex-col items-center text-sm text-gray-700 hover:cursor-pointer" @click="onDecline">
+          <div class="bg-red-500 text-white rounded-full p-3">
+            <Icon icon="mdi:phone-hangup" width="22" height="22" />
+          </div>
+          <span class="mt-1">Decline</span>
+        </button>
+
+        <button class="border border-cyan-400 text-cyan-600 rounded-full w-[132px]! h-[45px] hover:cursor-pointer font-medium text-sm hover:bg-cyan-50" @click="onTransfer">
+          Transfer
+        </button>
+
+        <button class="flex flex-col items-center text-sm text-gray-700 hover:cursor-pointer" @click="onPickup">
+          <div class="bg-green-700 text-white rounded-full p-3">
+            <Icon icon="mdi:phone" width="22" height="22" />
+          </div>
+          <span class="mt-1">Pick Up</span>
+        </button>
+
+      </div>
+      
+    </div> -->
+
+    <div class="bg-white py-4 px-0 flex flex-col space-y-6">
+
+        <Button variant="link" class="text-gray-800! w-fit mb-2"> <Icon icon="line-md:chevron-left" width="24" height="24" /> Transfer Call</Button>
+
+        <div class="px-4 py-0 space-y-2">
+            <h3 class="text-gray-500">Current Extension</h3>
+            <h2 class="text-gray-700 font-semibold">Restaurant</h2>
+        </div>
+
+        <div class="px-4">
+            <label for="role" class="block text-gray-700 font-medium mb-2">
+                Transfer to
+            </label>
+            <Dropdown
+                id="role"
+                v-model="form.roleId"
+                :options="roles"
+                optionLabel="label"
+                optionValue="value"
+                placeholder="Select Extension"
+                class="w-full rounded-full! border-sky-300! focus:border-sky-400! focus:ring-0!"
+            >
+                <template #option="slotProps">
+                    <div class="flex items-center gap-2">
+                        <span class="font-medium text-gray-800">{{ slotProps.option.label }}</span>
+                        <span class="text-sm text-cyan-600">{{ slotProps.option.description }}</span>
+                    </div>
+                </template>
+            </Dropdown>
+        </div>
+
+        <div class="px-4 flex justify-between">
+            <Button variant="outlined" class="border-sky-500! text-sky-500! rounded-full!">Cancel</Button>
+            <Button variant="outlined" class="border border-gray-500! text-gray-500! rounded-full!">Confirm Transfer</Button>
+
+        </div>
+      
+    </div>
+
+
+  </Dialog>
+</template>
+
+<style>
+    /* .pickup-dialog ::v-deep(.p-dialog-header) {
+    display: none;
+    } */
+
+    .pickup-dialog-header {
+        padding: 0px !important;
+    }
+</style>

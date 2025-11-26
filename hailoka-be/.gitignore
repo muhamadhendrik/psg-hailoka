@@ -1,0 +1,9 @@
+node_modules/
+dist/
+.env
+
+certs/
+
+# Test coverage
+coverage/
+*.lcov

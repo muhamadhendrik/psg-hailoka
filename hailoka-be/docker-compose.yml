@@ -1,0 +1,22 @@
+version: "3.9"
+
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: hailoka-backend
+    ports:
+      - "5000:5000"
+    env_file:
+      - .env
+    volumes:
+      - /app/node_modules
+    command: npm run start
+    networks:
+      - hailoka-network
+    restart: unless-stopped
+
+networks:
+  hailoka-network:
+    external: true 

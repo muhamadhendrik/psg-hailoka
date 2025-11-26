@@ -1,0 +1,38 @@
+name: Deploy Hailoka Backend (staging)
+
+on:
+  push:
+    branches:
+      - staging
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout (optional, hanya supaya job punya source)
+        uses: actions/checkout@v4
+
+      - name: Deploy to Server via SSH
+        uses: appleboy/ssh-action@v1.2.0
+        with:
+          host: ${{ secrets.SSH_HOST }}
+          username: ${{ secrets.SSH_USER }}
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          # port: ${{ secrets.SSH_PORT }} # <= pakai ini kalau SSH bukan port 22
+          script: |
+            set -e
+
+            cd ~/apps/hailoka-be
+
+            echo "-> Fetch & checkout staging"
+            git fetch origin
+            git checkout staging
+            git pull origin staging
+
+            echo "-> Build & restart container"
+            docker compose down
+            docker compose up -d --build
+
+            echo "-> Optional: remove dangling images"
+            docker image prune -f

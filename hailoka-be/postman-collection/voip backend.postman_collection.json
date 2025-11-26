@@ -1,0 +1,1917 @@
+{
+	"info": {
+		"_postman_id": "c303217d-4c75-4c6f-a0ec-80bb84a58b22",
+		"name": "voip backend",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "16192008",
+		"_collection_link": "https://team-sukses.postman.co/workspace/Gawean~59a14e4e-b3ea-4b10-942b-6c6f2ad1ca25/collection/16192008-c303217d-4c75-4c6f-a0ec-80bb84a58b22?action=share&source=collection_link&creator=16192008"
+	},
+	"item": [
+		{
+			"name": "organization",
+			"item": [
+				{
+					"name": "organization",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiZWNkMDM1MjItYzYwMi00MzE5LWEwYTItZGY2ZjMyMzIxOTVlIiwibmFtZSI6IkFobWFkIEZhdXppIiwiZW1haWwiOiJhZHppLmZhdXppYWhtYWRAZ21haWwuY29tIiwidXNlclR5cGUiOiJ1c2VyIiwiaWF0IjoxNzYwMzYxOTM0LCJleHAiOjE3NjAzODcxMzR9.SxDsM42aPoJai5_L3lJ0AFXwdzglB11O1rdyhDv-nFk",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"name\": \"Green Lake Ressidance\",\n  \"total_member\": 12,\n  \"description\": \"Local community group\",\n  \"address\": \"Some street 123\",\n  \"latitude\": 123456,\n  \"longitude\": 654321,\n  \"primary_contact_full_name\": \"Aji\",\n  \"primary_contact_phone_number\": \"+62-812-xxx\",\n  \"internal_notes\": null\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/organizations",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"organizations"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "organization",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiNDE3MzAwZWYtM2U2OC00ZGEzLTk2NDktYmU1YmM3NWZhYTQxIiwibmFtZSI6IkphbmUgRG9lIiwiZW1haWwiOiJqYW5lZG9lMjAyNUBnbWFpbC5jb20iLCJ1c2VyVHlwZSI6InN1cGVyYWRtaW4iLCJpYXQiOjE3NTk5MjY0NTIsImV4cCI6MTc1OTkzMDA1Mn0.kyw452LDRu-BZIon2NgKFl31b0JcUc0RuEt6Bu-000E",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/organizations",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"organizations"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get organization settings",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiZWNkMDM1MjItYzYwMi00MzE5LWEwYTItZGY2ZjMyMzIxOTVlIiwibmFtZSI6IkFobWFkIEZhdXppIiwiZW1haWwiOiJhZHppLmZhdXppYWhtYWRAZ21haWwuY29tIiwidXNlclR5cGUiOiJ1c2VyIiwiaWF0IjoxNzYwMzYxOTM0LCJleHAiOjE3NjAzODcxMzR9.SxDsM42aPoJai5_L3lJ0AFXwdzglB11O1rdyhDv-nFk",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/organizations/e3fe22de-cb22-419b-8948-32a461123028/settings",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"organizations",
+								"e3fe22de-cb22-419b-8948-32a461123028",
+								"settings"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update organization settings",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiZWNkMDM1MjItYzYwMi00MzE5LWEwYTItZGY2ZjMyMzIxOTVlIiwibmFtZSI6IkFobWFkIEZhdXppIiwiZW1haWwiOiJhZHppLmZhdXppYWhtYWRAZ21haWwuY29tIiwidXNlclR5cGUiOiJ1c2VyIiwiaWF0IjoxNzYwMzYxOTM0LCJleHAiOjE3NjAzODcxMzR9.SxDsM42aPoJai5_L3lJ0AFXwdzglB11O1rdyhDv-nFk",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"name\": \"Updated Organization Name\",\n  \"description\": \"Updated description\",\n  \"primary_contact_full_name\": \"Updated Contact\",\n  \"primary_contact_phone_number\": \"+62-812-xxx-xxx\",\n  \"primary_did_number\": \"+62-21-xxx-xxx\",\n  \"ring_timeout_seconds\": 90,\n  \"is_record_a_call\": true\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/organizations/e3fe22de-cb22-419b-8948-32a461123028/settings",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"organizations",
+								"e3fe22de-cb22-419b-8948-32a461123028",
+								"settings"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get organization change logs",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiZWNkMDM1MjItYzYwMi00MzE5LWEwYTItZGY2ZjMyMzIxOTVlIiwibmFtZSI6IkFobWFkIEZhdXppIiwiZW1haWwiOiJhZHppLmZhdXppYWhtYWRAZ21haWwuY29tIiwidXNlclR5cGUiOiJ1c2VyIiwiaWF0IjoxNzYwMzYxOTM0LCJleHAiOjE3NjAzODcxMzR9.SxDsM42aPoJai5_L3lJ0AFXwdzglB11O1rdyhDv-nFk",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/organizations/e3fe22de-cb22-419b-8948-32a461123028/change-logs?page=1&limit=50",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"organizations",
+								"e3fe22de-cb22-419b-8948-32a461123028",
+								"change-logs"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1",
+									"description": "Page number (default: 1)"
+								},
+								{
+									"key": "limit",
+									"value": "50",
+									"description": "Items per page (default: 50)"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get organization user logs (all users)",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiZWNkMDM1MjItYzYwMi00MzE5LWEwYTItZGY2ZjMyMzIxOTVlIiwibmFtZSI6IkFobWFkIEZhdXppIiwiZW1haWwiOiJhZHppLmZhdXppYWhtYWRAZ21haWwuY29tIiwidXNlclR5cGUiOiJ1c2VyIiwiaWF0IjoxNzYwMzYxOTM0LCJleHAiOjE3NjAzODcxMzR9.SxDsM42aPoJai5_L3lJ0AFXwdzglB11O1rdyhDv-nFk",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/organizations/e3fe22de-cb22-419b-8948-32a461123028/user-logs?page=1&limit=50",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"organizations",
+								"e3fe22de-cb22-419b-8948-32a461123028",
+								"user-logs"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1",
+									"description": "Page number (default: 1)"
+								},
+								{
+									"key": "limit",
+									"value": "50",
+									"description": "Items per page (default: 50)"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get organization user logs (specific user)",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiZWNkMDM1MjItYzYwMi00MzE5LWEwYTItZGY2ZjMyMzIxOTVlIiwibmFtZSI6IkFobWFkIEZhdXppIiwiZW1haWwiOiJhZHppLmZhdXppYWhtYWRAZ21haWwuY29tIiwidXNlclR5cGUiOiJ1c2VyIiwiaWF0IjoxNzYwMzYxOTM0LCJleHAiOjE3NjAzODcxMzR9.SxDsM42aPoJai5_L3lJ0AFXwdzglB11O1rdyhDv-nFk",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/organizations/e3fe22de-cb22-419b-8948-32a461123028user-logs/123e4567-e89b-12d3-a456-426614174000?page=1&limit=50",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"organizations",
+								"e3fe22de-cb22-419b-8948-32a461123028user-logs",
+								"123e4567-e89b-12d3-a456-426614174000"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1",
+									"description": "Page number (default: 1)"
+								},
+								{
+									"key": "limit",
+									"value": "50",
+									"description": "Items per page (default: 50)"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Staff",
+			"item": [
+				{
+					"name": "staff",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiZWNkMDM1MjItYzYwMi00MzE5LWEwYTItZGY2ZjMyMzIxOTVlIiwibmFtZSI6IkFobWFkIEZhdXppIiwiZW1haWwiOiJhZHppLmZhdXppYWhtYWRAZ21haWwuY29tIiwidXNlclR5cGUiOiJ1c2VyIiwiaWF0IjoxNzYwMzYxOTM0LCJleHAiOjE3NjAzODcxMzR9.SxDsM42aPoJai5_L3lJ0AFXwdzglB11O1rdyhDv-nFk",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Agus\",\n    \"email\": \"agus2025@gmail.com\",\n    \"roleId\": 4,\n    \"organizationId\": \"151044dd-5df4-41b8-805b-892c27298193\",\n    \"extensions\": [\n     \"62366af1-4c91-4630-91b9-c152871729e1\",\n     \"6edbdcc1-8d8e-4c7f-92dc-1dad9d8efc9d\"\n    ]\n}\n\n// {\n//     \"name\": \"Budi\",\n//     \"email\": \"budidoe2025@gmail.com\",\n//     \"roleId\": 4,\n//     \"organizationId\": \"5702cf79-5342-4db7-ae94-a5c08906800e\"\n//     // \"extensions\": [\n//     //  \"6edbdcc1-8d8e-4c7f-92dc-1dad9d8efc9d\",\n//     //  \"edcaa566-7fd6-4aff-9c84-13ea877a7718\"\n//     // ]\n// }\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/staff",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"staff"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "staff selection",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiZWNkMDM1MjItYzYwMi00MzE5LWEwYTItZGY2ZjMyMzIxOTVlIiwibmFtZSI6IkFobWFkIEZhdXppIiwiZW1haWwiOiJhZHppLmZhdXppYWhtYWRAZ21haWwuY29tIiwidXNlclR5cGUiOiJ1c2VyIiwiaWF0IjoxNzYwMzY1NTA1LCJleHAiOjE3NjAzOTA3MDV9.LZ9hCJpVBLBqA9SHn1j-Ln1TtfedkdNEEonpKacTx1g",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/organizations/151044dd-5df4-41b8-805b-892c27298193/staffs-selection",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"organizations",
+								"151044dd-5df4-41b8-805b-892c27298193",
+								"staffs-selection"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "staff by org",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiZWNkMDM1MjItYzYwMi00MzE5LWEwYTItZGY2ZjMyMzIxOTVlIiwibmFtZSI6IkFobWFkIEZhdXppIiwiZW1haWwiOiJhZHppLmZhdXppYWhtYWRAZ21haWwuY29tIiwidXNlclR5cGUiOiJ1c2VyIiwiaWF0IjoxNzYwMzY1NTA1LCJleHAiOjE3NjAzOTA3MDV9.LZ9hCJpVBLBqA9SHn1j-Ln1TtfedkdNEEonpKacTx1g",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/organizations/151044dd-5df4-41b8-805b-892c27298193/staffs",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"organizations",
+								"151044dd-5df4-41b8-805b-892c27298193",
+								"staffs"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "staff by user id",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiZWNkMDM1MjItYzYwMi00MzE5LWEwYTItZGY2ZjMyMzIxOTVlIiwibmFtZSI6IkFobWFkIEZhdXppIiwiZW1haWwiOiJhZHppLmZhdXppYWhtYWRAZ21haWwuY29tIiwidXNlclR5cGUiOiJ1c2VyIiwiaWF0IjoxNzYwMzY1NTA1LCJleHAiOjE3NjAzOTA3MDV9.LZ9hCJpVBLBqA9SHn1j-Ln1TtfedkdNEEonpKacTx1g",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "// {\n//     \"name\": \"Budi\",\n//     \"email\": \"budidoe2025@gmail.com\",\n//     \"roleId\": 4,\n//     \"organizationId\": \"5702cf79-5342-4db7-ae94-a5c08906800e\"\n//     // \"extensions\": [\n//     //  \"6edbdcc1-8d8e-4c7f-92dc-1dad9d8efc9d\",\n//     //  \"edcaa566-7fd6-4aff-9c84-13ea877a7718\"\n//     // ]\n// }\n\n{\n    \"name\": \"Agus\",\n    \"email\": \"agus2025@gmail.com\",\n    \"roleId\": 4,\n    \"organizationId\": \"5702cf79-5342-4db7-ae94-a5c08906800e\",\n    \"extensions\": [\n     \"1a7e3938-9119-4576-87d2-85a072599d4d\",\n     \"3f3b2fc6-3242-4c9c-a612-8a2bbaca3d02\"\n    ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/organizations/151044dd-5df4-41b8-805b-892c27298193/staffs/fc57dd98-0998-44ce-afa1-ccae4b9916ff",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"organizations",
+								"151044dd-5df4-41b8-805b-892c27298193",
+								"staffs",
+								"fc57dd98-0998-44ce-afa1-ccae4b9916ff"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "staff",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiZWNkMDM1MjItYzYwMi00MzE5LWEwYTItZGY2ZjMyMzIxOTVlIiwibmFtZSI6IkFobWFkIEZhdXppIiwiZW1haWwiOiJhZHppLmZhdXppYWhtYWRAZ21haWwuY29tIiwidXNlclR5cGUiOiJ1c2VyIiwiaWF0IjoxNzYwMzY1OTkxLCJleHAiOjE3NjAzOTExOTF9.eIhYccXPxHkBQ4FTgRLHpmLn7-kc6yBgRvF6-byjC1U",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"userId\":\"28da87e9-936f-4dff-838f-62b98f4458a4\",\n    \"name\": \"Budi Permanax\",\n    \"email\": \"budipermanax2025@gmail.com\",\n    \"roleId\": 4,\n    \"organizationId\": \"151044dd-5df4-41b8-805b-892c27298193\",\n    \"extensions\": [\n        \"1a7e3938-9119-4576-87d2-85a072599d4d\",\n        \"3f3b2fc6-3242-4c9c-a612-8a2bbaca3d02\"\n    ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/staff",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"staff"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "staff",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiZWNkMDM1MjItYzYwMi00MzE5LWEwYTItZGY2ZjMyMzIxOTVlIiwibmFtZSI6IkFobWFkIEZhdXppIiwiZW1haWwiOiJhZHppLmZhdXppYWhtYWRAZ21haWwuY29tIiwidXNlclR5cGUiOiJ1c2VyIiwiaWF0IjoxNzYwMzY1NTA1LCJleHAiOjE3NjAzOTA3MDV9.LZ9hCJpVBLBqA9SHn1j-Ln1TtfedkdNEEonpKacTx1g",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"userId\":\"10d57e87-0b25-48cf-bc89-f98c83da6ac7\",\n    \"name\": \"Budi Permanax\",\n    \"email\": \"budipermanax2025@gmail.com\",\n    \"roleId\": 4,\n    \"organizationId\": \"151044dd-5df4-41b8-805b-892c27298193\",\n    \"extensions\": [\n    //  \"6edbdcc1-8d8e-4c7f-92dc-1dad9d8efc9d\",\n    //  \"edcaa566-7fd6-4aff-9c84-13ea877a7718\"\n    ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/staff/c13ff44e-3a45-4a0a-8d3d-41a955c87d97",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"staff",
+								"c13ff44e-3a45-4a0a-8d3d-41a955c87d97"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Extension",
+			"item": [
+				{
+					"name": "extension",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"organization_id\": \"151044dd-5df4-41b8-805b-892c27298193\",\n  \"name\": \"Support Line\",\n  \"icon\": \"support.png\",\n  \"status_id\": 1,\n  \"extension_operation_hours\": [\n    { \"day_of_week\": 1, \"start_time\": \"09:00:00\", \"end_time\": \"17:00:00\" },\n    { \"day_of_week\": 2, \"start_time\": \"10:00:00\", \"end_time\": \"14:00:00\" }\n  ],\n  \"extension_assigned_staffs\": [\n    \"c746a5c3-3f06-44ae-aea4-f5917b29e76b\",\n    \"fc57dd98-0998-44ce-afa1-ccae4b9916ff\"\n  ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/extensions",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"extensions"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "extension",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"name\": \"Support Customer\",\n  \"icon\": \"support.png\",\n  \"status_id\": 1,\n  \"extension_operation_hours\": [\n    { \"day_of_week\": 1, \"start_time\": \"09:00:00\", \"end_time\": \"17:00:00\" },\n    { \"day_of_week\": 2, \"start_time\": \"10:00:00\", \"end_time\": \"14:00:00\" }\n  ],\n  \"extension_assigned_staffs\": [\n    \"c746a5c3-3f06-44ae-aea4-f5917b29e76b\",\n    \"fc57dd98-0998-44ce-afa1-ccae4b9916ff\"\n  ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/extensions/e19a5d90-7a8e-46d6-b9e7-9a995b0bb2fe",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"extensions",
+								"e19a5d90-7a8e-46d6-b9e7-9a995b0bb2fe"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "extension",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/extensions/151044dd-5df4-41b8-805b-892c27298193",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"extensions",
+								"151044dd-5df4-41b8-805b-892c27298193"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "extension select",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/extensions/151044dd-5df4-41b8-805b-892c27298193/select",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"extensions",
+								"151044dd-5df4-41b8-805b-892c27298193",
+								"select"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "extension by id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/extensionsById/e19a5d90-7a8e-46d6-b9e7-9a995b0bb2fe",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"extensionsById",
+								"e19a5d90-7a8e-46d6-b9e7-9a995b0bb2fe"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "extension",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/extensions/6edbdcc1-8d8e-4c7f-92dc-1dad9d8efc9d",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"extensions",
+								"6edbdcc1-8d8e-4c7f-92dc-1dad9d8efc9d"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Extension Rule",
+			"item": [
+				{
+					"name": "create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"organization_id\": \"151044dd-5df4-41b8-805b-892c27298193\",\r\n    \"extension_id\": \"57e2e38d-0460-46bf-80ff-9355d7798502\",\r\n    \"extension_destination\": \"e19a5d90-7a8e-46d6-b9e7-9a995b0bb2fe\",\r\n    \"timescope\": \"off_hours\",\r\n    \"condition\": \"busy\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/extensions-rule",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"extensions-rule"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"organization_id\": \"a95e8f50-e545-4f4b-a384-5baaf07e3198\",\r\n    \"extension_id\": \"acd0b16d-1fc2-44c7-a49e-660ca6158447\",\r\n    \"extension_destination\": \"edcaa566-7fd6-4aff-9c84-13ea877a7718\",\r\n    \"timescope\": \"work_hours\",\r\n    \"condition\": \"no_answer\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/extensions-rule/b4239e13-3e70-495a-ab67-872dee5fc590",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"extensions-rule",
+								"b4239e13-3e70-495a-ab67-872dee5fc590"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get by org",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"organization_id\": \"a95e8f50-e545-4f4b-a384-5baaf07e3198\",\r\n    \"extension_id\": \"36bbcdac-eac4-4716-a1d4-d873a7e2862d\",\r\n    \"extension_destination\": \"edcaa566-7fd6-4aff-9c84-13ea877a7718\",\r\n    \"timescope\": \"work_hours\",\r\n    \"condition\": \"no_answer\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/extensions-rule-byorg/151044dd-5df4-41b8-805b-892c27298193",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"extensions-rule-byorg",
+								"151044dd-5df4-41b8-805b-892c27298193"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get by id",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"organization_id\": \"a95e8f50-e545-4f4b-a384-5baaf07e3198\",\r\n    \"extension_id\": \"36bbcdac-eac4-4716-a1d4-d873a7e2862d\",\r\n    \"extension_destination\": \"edcaa566-7fd6-4aff-9c84-13ea877a7718\",\r\n    \"timescope\": \"work_hours\",\r\n    \"condition\": \"no_answer\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/extensions-rule-byid/1e651d90-b00e-4adf-b360-5bc7837c4136",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"extensions-rule-byid",
+								"1e651d90-b00e-4adf-b360-5bc7837c4136"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"organization_id\": \"a95e8f50-e545-4f4b-a384-5baaf07e3198\",\r\n    \"extension_id\": \"36bbcdac-eac4-4716-a1d4-d873a7e2862d\",\r\n    \"extension_destination\": \"edcaa566-7fd6-4aff-9c84-13ea877a7718\",\r\n    \"timescope\": \"work_hours\",\r\n    \"condition\": \"no_answer\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/extensions-rule/b4239e13-3e70-495a-ab67-872dee5fc590",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"extensions-rule",
+								"b4239e13-3e70-495a-ab67-872dee5fc590"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "QR Code",
+			"item": [
+				{
+					"name": "generate",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"organization_id\":\"151044dd-5df4-41b8-805b-892c27298193\",\r\n    // \"qr_url\":\"\",\r\n    \"data\": {\r\n        \"organization_id\":\"151044dd-5df4-41b8-805b-892c27298193\",\r\n        \"name\":\"Green Lake Hotel\",\r\n        \"address\":\"Semanan, Jakarta Barat\",\r\n        \"description\":\"Lorem ipsum dolor sit amet\"\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/qr/generate",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"qr",
+								"generate"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "qr code by org",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"organization_id\":\"151044dd-5df4-41b8-805b-892c27298193\",\r\n    // \"qr_url\":\"\",\r\n    \"data\": {\r\n        \"organization_id\":\"151044dd-5df4-41b8-805b-892c27298193\",\r\n        \"name\":\"Green Lake Hotel\",\r\n        \"address\":\"Semanan, Jakarta Barat\",\r\n        \"description\":\"Lorem ipsum dolor sit amet\"\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/qr/org/151044dd-5df4-41b8-805b-892c27298193",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"qr",
+								"org",
+								"151044dd-5df4-41b8-805b-892c27298193"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "qr code by org image",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"organization_id\":\"151044dd-5df4-41b8-805b-892c27298193\",\r\n    // \"qr_url\":\"\",\r\n    \"data\": {\r\n        \"organization_id\":\"151044dd-5df4-41b8-805b-892c27298193\",\r\n        \"name\":\"Green Lake Hotel\",\r\n        \"address\":\"Semanan, Jakarta Barat\",\r\n        \"description\":\"Lorem ipsum dolor sit amet\"\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/qr/org/151044dd-5df4-41b8-805b-892c27298193/image",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"qr",
+								"org",
+								"151044dd-5df4-41b8-805b-892c27298193",
+								"image"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "qr code by qr url",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"organization_id\":\"151044dd-5df4-41b8-805b-892c27298193\",\r\n    // \"qr_url\":\"\",\r\n    \"data\": {\r\n        \"organization_id\":\"151044dd-5df4-41b8-805b-892c27298193\",\r\n        \"name\":\"Green Lake Hotel\",\r\n        \"address\":\"Semanan, Jakarta Barat\",\r\n        \"description\":\"Lorem ipsum dolor sit amet\"\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/qr/url/ba16d8a1-69a8-4c87-834e-cd82ac1916de",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"qr",
+								"url",
+								"ba16d8a1-69a8-4c87-834e-cd82ac1916de"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "qr code by qr url updated",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"organization_id\":\"151044dd-5df4-41b8-805b-892c27298193\",\r\n    // \"qr_url\":\"\",\r\n    \"data\": {\r\n        \"organization_id\":\"151044dd-5df4-41b8-805b-892c27298193\",\r\n        \"name\":\"Green Lake Hotel\",\r\n        \"address\":\"Semanan, Jakarta Barat\",\r\n        \"description\":\"Lorem ipsum dolor sit amet\"\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/qr/url/18a6431a-2ae2-4e2e-9081-b80e1829753a",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"qr",
+								"url",
+								"18a6431a-2ae2-4e2e-9081-b80e1829753a"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Dashboard",
+			"item": [
+				{
+					"name": "get incoming calls",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiZWNkMDM1MjItYzYwMi00MzE5LWEwYTItZGY2ZjMyMzIxOTVlIiwibmFtZSI6IkFobWFkIEZhdXppIiwiZW1haWwiOiJhZHppLmZhdXppYWhtYWRAZ21haWwuY29tIiwidXNlclR5cGUiOiJ1c2VyIiwiaWF0IjoxNzYwMzYxOTM0LCJleHAiOjE3NjAzODcxMzR9.SxDsM42aPoJai5_L3lJ0AFXwdzglB11O1rdyhDv-nFk",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/dashboard/151044dd-5df4-41b8-805b-892c27298193/incoming-calls",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"dashboard",
+								"151044dd-5df4-41b8-805b-892c27298193",
+								"incoming-calls"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Super Admin",
+			"item": [
+				{
+					"name": "get dashboard",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiNDE3MzAwZWYtM2U2OC00ZGEzLTk2NDktYmU1YmM3NWZhYTQxIiwibmFtZSI6IkphbmUgRG9lIiwiZW1haWwiOiJqYW5lZG9lMjAyNUBnbWFpbC5jb20iLCJ1c2VyVHlwZSI6InN1cGVyYWRtaW4iLCJpYXQiOjE3NTk5MjY0NTIsImV4cCI6MTc1OTkzMDA1Mn0.kyw452LDRu-BZIon2NgKFl31b0JcUc0RuEt6Bu-000E",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/super-admin/dashboard",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"super-admin",
+								"dashboard"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get all users",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiNDE3MzAwZWYtM2U2OC00ZGEzLTk2NDktYmU1YmM3NWZhYTQxIiwibmFtZSI6IkphbmUgRG9lIiwiZW1haWwiOiJqYW5lZG9lMjAyNUBnbWFpbC5jb20iLCJ1c2VyVHlwZSI6InN1cGVyYWRtaW4iLCJpYXQiOjE3NTk5MjY0NTIsImV4cCI6MTc1OTkzMDA1Mn0.kyw452LDRu-BZIon2NgKFl31b0JcUc0RuEt6Bu-000E",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/super-admin/users",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"super-admin",
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get user by id",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiNDE3MzAwZWYtM2U2OC00ZGEzLTk2NDktYmU1YmM3NWZhYTQxIiwibmFtZSI6IkphbmUgRG9lIiwiZW1haWwiOiJqYW5lZG9lMjAyNUBnbWFpbC5jb20iLCJ1c2VyVHlwZSI6InN1cGVyYWRtaW4iLCJpYXQiOjE3NTk5MjY0NTIsImV4cCI6MTc1OTkzMDA1Mn0.kyw452LDRu-BZIon2NgKFl31b0JcUc0RuEt6Bu-000E",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/super-admin/users/ecd03522-c602-4319-a0a2-df6f3232195e",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"super-admin",
+								"users",
+								"ecd03522-c602-4319-a0a2-df6f3232195e"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "suspend user",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiNDE3MzAwZWYtM2U2OC00ZGEzLTk2NDktYmU1YmM3NWZhYTQxIiwibmFtZSI6IkphbmUgRG9lIiwiZW1haWwiOiJqYW5lZG9lMjAyNUBnbWFpbC5jb20iLCJ1c2VyVHlwZSI6InN1cGVyYWRtaW4iLCJpYXQiOjE3NTk5MjY0NTIsImV4cCI6MTc1OTkzMDA1Mn0.kyw452LDRu-BZIon2NgKFl31b0JcUc0RuEt6Bu-000E",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/super-admin/users/ecd03522-c602-4319-a0a2-df6f3232195e/suspend",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"super-admin",
+								"users",
+								"ecd03522-c602-4319-a0a2-df6f3232195e",
+								"suspend"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "activate user",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiNDE3MzAwZWYtM2U2OC00ZGEzLTk2NDktYmU1YmM3NWZhYTQxIiwibmFtZSI6IkphbmUgRG9lIiwiZW1haWwiOiJqYW5lZG9lMjAyNUBnbWFpbC5jb20iLCJ1c2VyVHlwZSI6InN1cGVyYWRtaW4iLCJpYXQiOjE3NTk5MjY0NTIsImV4cCI6MTc1OTkzMDA1Mn0.kyw452LDRu-BZIon2NgKFl31b0JcUc0RuEt6Bu-000E",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/super-admin/users/ecd03522-c602-4319-a0a2-df6f3232195e/activate",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"super-admin",
+								"users",
+								"ecd03522-c602-4319-a0a2-df6f3232195e",
+								"activate"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "approve organization",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiNDE3MzAwZWYtM2U2OC00ZGEzLTk2NDktYmU1YmM3NWZhYTQxIiwibmFtZSI6IkphbmUgRG9lIiwiZW1haWwiOiJqYW5lZG9lMjAyNUBnbWFpbC5jb20iLCJ1c2VyVHlwZSI6InN1cGVyYWRtaW4iLCJpYXQiOjE3NTk5MjY0NTIsImV4cCI6MTc1OTkzMDA1Mn0.kyw452LDRu-BZIon2NgKFl31b0JcUc0RuEt6Bu-000E",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"reviewer_notes\": \"Organization telah memenuhi semua persyaratan\",\n  \"internal_notes\": \"Approved by super admin\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/super-admin/organizations/151044dd-5df4-41b8-805b-892c27298193/approve",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"super-admin",
+								"organizations",
+								"151044dd-5df4-41b8-805b-892c27298193",
+								"approve"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "reject organization",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiNDE3MzAwZWYtM2U2OC00ZGEzLTk2NDktYmU1YmM3NWZhYTQxIiwibmFtZSI6IkphbmUgRG9lIiwiZW1haWwiOiJqYW5lZG9lMjAyNUBnbWFpbC5jb20iLCJ1c2VyVHlwZSI6InN1cGVyYWRtaW4iLCJpYXQiOjE3NTk5MjY0NTIsImV4cCI6MTc1OTkzMDA1Mn0.kyw452LDRu-BZIon2NgKFl31b0JcUc0RuEt6Bu-000E",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"reviewer_notes\": \"Dokumen tidak lengkap, silakan lengkapi dokumen terlebih dahulu\",\n  \"internal_notes\": \"Rejected due to incomplete documentation\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/super-admin/organizations/151044dd-5df4-41b8-805b-892c27298193/reject",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"super-admin",
+								"organizations",
+								"151044dd-5df4-41b8-805b-892c27298193",
+								"reject"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "suspend organization",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiNDE3MzAwZWYtM2U2OC00ZGEzLTk2NDktYmU1YmM3NWZhYTQxIiwibmFtZSI6IkphbmUgRG9lIiwiZW1haWwiOiJqYW5lZG9lMjAyNUBnbWFpbC5jb20iLCJ1c2VyVHlwZSI6InN1cGVyYWRtaW4iLCJpYXQiOjE3NTk5MjY0NTIsImV4cCI6MTc1OTkzMDA1Mn0.kyw452LDRu-BZIon2NgKFl31b0JcUc0RuEt6Bu-000E",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"reviewer_notes\": \"Organisasi di-suspend karena melanggar ketentuan\",\n  \"internal_notes\": \"Suspended due to policy violation\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/super-admin/organizations/151044dd-5df4-41b8-805b-892c27298193/suspend",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"super-admin",
+								"organizations",
+								"151044dd-5df4-41b8-805b-892c27298193",
+								"suspend"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "activate organization",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiNDE3MzAwZWYtM2U2OC00ZGEzLTk2NDktYmU1YmM3NWZhYTQxIiwibmFtZSI6IkphbmUgRG9lIiwiZW1haWwiOiJqYW5lZG9lMjAyNUBnbWFpbC5jb20iLCJ1c2VyVHlwZSI6InN1cGVyYWRtaW4iLCJpYXQiOjE3NTk5MjY0NTIsImV4cCI6MTc1OTkzMDA1Mn0.kyw452LDRu-BZIon2NgKFl31b0JcUc0RuEt6Bu-000E",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"reviewer_notes\": \"Organisasi telah memenuhi syarat dan diaktifkan kembali\",\n  \"internal_notes\": \"Activated after review\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/super-admin/organizations/151044dd-5df4-41b8-805b-892c27298193/activate",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"super-admin",
+								"organizations",
+								"151044dd-5df4-41b8-805b-892c27298193",
+								"activate"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Call",
+			"item": [
+				{
+					"name": "create call",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "// {\n//     \"organization_id\":\"151044dd-5df4-41b8-805b-892c27298193\",\n//     \"extension_id\":\"57e2e38d-0460-46bf-80ff-9355d7798502\",\n//     \"guest\": \"ninja\"\n// }\n\n// {\n//     \"organization_id\":\"151044dd-5df4-41b8-805b-892c27298193\",\n//     \"extension_id\":\"022a1481-eb75-48fc-a4f7-fcb81f2b680b\",\n//     \"guest_user_id\": \"dd490122-1e7b-4e39-98ec-3bd332df8fcd\"\n// }\n\n{\n    \"organization_id\":\"151044dd-5df4-41b8-805b-892c27298193\",\n    \"extension_id\":\"022a1481-eb75-48fc-a4f7-fcb81f2b680b\",\n    \"guest_user_id\": \"dd490122-1e7b-4e39-98ec-3bd332df8fcd\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/call",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"call"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "add call participant",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"call_id\": \"123e4567-e89b-12d3-a456-426614174000\",\n  \"role\": \"recipient\",\n  \"kind\": \"user\",\n  \"ref_id\": \"123e4567-e89b-12d3-a456-426614174001\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/call/participant",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"call",
+								"participant"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "add call event (answered)",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"call_id\": \"123e4567-e89b-12d3-a456-426614174000\",\n  \"call_participant_id\": 1,\n  \"attempt_count\": 1,\n  \"event_type\": \"answered\",\n  \"queue_count\": 0\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/call/event",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"call",
+								"event"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "add call event (queued)",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"call_id\": \"123e4567-e89b-12d3-a456-426614174000\",\n  \"event_type\": \"queued\",\n  \"queue_count\": 2\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/call/event",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"call",
+								"event"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "add call event (ended)",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"call_id\": \"123e4567-e89b-12d3-a456-426614174000\",\n  \"event_type\": \"ended\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/call/event",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"call",
+								"event"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create call feedback",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"call_id\": \"123e4567-e89b-12d3-a456-426614174000\",\n  \"kind\": \"USER\",\n  \"ref_id\": \"123e4567-e89b-12d3-a456-426614174001\",\n  \"score\": 5,\n  \"feedback\": \"Excellent service!\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/call/feedback",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"call",
+								"feedback"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get call feedbacks (all calls)",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiZWNkMDM1MjItYzYwMi00MzE5LWEwYTItZGY2ZjMyMzIxOTVlIiwibmFtZSI6IkFobWFkIEZhdXppIiwiZW1haWwiOiJhZHppLmZhdXppYWhtYWRAZ21haWwuY29tIiwidXNlclR5cGUiOiJ1c2VyIiwiaWF0IjoxNzYwMzYxOTM0LCJleHAiOjE3NjAzODcxMzR9.SxDsM42aPoJai5_L3lJ0AFXwdzglB11O1rdyhDv-nFk",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/organizations/151044dd-5df4-41b8-805b-892c27298193/call-feedbacks?page=1&limit=50",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"organizations",
+								"151044dd-5df4-41b8-805b-892c27298193",
+								"call-feedbacks"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1",
+									"description": "Page number (default: 1)"
+								},
+								{
+									"key": "limit",
+									"value": "50",
+									"description": "Items per page (default: 50)"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get call feedbacks (specific call)",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiZWNkMDM1MjItYzYwMi00MzE5LWEwYTItZGY2ZjMyMzIxOTVlIiwibmFtZSI6IkFobWFkIEZhdXppIiwiZW1haWwiOiJhZHppLmZhdXppYWhtYWRAZ21haWwuY29tIiwidXNlclR5cGUiOiJ1c2VyIiwiaWF0IjoxNzYwMzYxOTM0LCJleHAiOjE3NjAzODcxMzR9.SxDsM42aPoJai5_L3lJ0AFXwdzglB11O1rdyhDv-nFk",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/organizations/151044dd-5df4-41b8-805b-892c27298193/call-feedbacks/123e4567-e89b-12d3-a456-426614174000?page=1&limit=50",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"organizations",
+								"151044dd-5df4-41b8-805b-892c27298193",
+								"call-feedbacks",
+								"123e4567-e89b-12d3-a456-426614174000"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1",
+									"description": "Page number (default: 1)"
+								},
+								{
+									"key": "limit",
+									"value": "50",
+									"description": "Items per page (default: 50)"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get call overview",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "// {\n//     \"organization_id\":\"151044dd-5df4-41b8-805b-892c27298193\",\n//     \"extension_id\":\"57e2e38d-0460-46bf-80ff-9355d7798502\",\n//     \"guest\": \"ninja\"\n// }\n\n{\n    \"organization_id\":\"151044dd-5df4-41b8-805b-892c27298193\",\n    \"extension_id\":\"022a1481-eb75-48fc-a4f7-fcb81f2b680b\",\n    \"guest_user_id\": \"dd490122-1e7b-4e39-98ec-3bd332df8fcd\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/tmp/151044dd-5df4-41b8-805b-892c27298193",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"tmp",
+								"151044dd-5df4-41b8-805b-892c27298193"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "get call overview",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:5000/tmp/151044dd-5df4-41b8-805b-892c27298193",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"tmp",
+										"151044dd-5df4-41b8-805b-892c27298193"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "Text",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "true"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "1159"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"487-TG3QzVspOUsYZt1IG0Z+VjbtZuU\""
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 01 Nov 2025 19:03:39 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": [\n        {\n            \"id\": 9,\n            \"call_id\": \"ffa62e1b-af5f-4bfe-a2ed-0a89bf81a865\",\n            \"role\": \"host\",\n            \"kind\": \"user\",\n            \"ref_id\": \"f362eb45-1990-45fe-9276-038183a14c3a\",\n            \"created_at\": \"2025-11-01T15:12:05.000Z\",\n            \"call\": {\n                \"id\": \"ffa62e1b-af5f-4bfe-a2ed-0a89bf81a865\",\n                \"extension\": {\n                    \"id\": \"022a1481-eb75-48fc-a4f7-fcb81f2b680b\",\n                    \"name\": \"Kitchen\"\n                }\n            },\n            \"user\": {\n                \"id\": \"f362eb45-1990-45fe-9276-038183a14c3a\",\n                \"name\": \"Surya\"\n            },\n            \"events\": [\n                {\n                    \"id\": 4,\n                    \"event_type\": \"ringing\",\n                    \"created_at\": \"2025-11-01T15:12:05.000Z\"\n                },\n                {\n                    \"id\": 5,\n                    \"event_type\": \"answered\",\n                    \"created_at\": \"2025-11-01T15:23:33.000Z\"\n                },\n                {\n                    \"id\": 6,\n                    \"event_type\": \"ended\",\n                    \"created_at\": \"2025-11-01T17:18:09.000Z\"\n                }\n            ],\n            \"duration\": 6876,\n            \"last_event_type\": \"ended\"\n        },\n        {\n            \"id\": 12,\n            \"call_id\": \"7ea886b1-699c-44c5-8a0d-6695163c992b\",\n            \"role\": \"host\",\n            \"kind\": \"user\",\n            \"ref_id\": \"c746a5c3-3f06-44ae-aea4-f5917b29e76b\",\n            \"created_at\": \"2025-11-01T17:21:13.000Z\",\n            \"call\": {\n                \"id\": \"7ea886b1-699c-44c5-8a0d-6695163c992b\",\n                \"extension\": {\n                    \"id\": \"e19a5d90-7a8e-46d6-b9e7-9a995b0bb2fe\",\n                    \"name\": \"Support Customer\"\n                }\n            },\n            \"user\": {\n                \"id\": \"c746a5c3-3f06-44ae-aea4-f5917b29e76b\",\n                \"name\": \"John wick\"\n            },\n            \"events\": [\n                {\n                    \"id\": 8,\n                    \"event_type\": \"ringing\",\n                    \"created_at\": \"2025-11-01T17:21:13.000Z\"\n                }\n            ],\n            \"duration\": null,\n            \"last_event_type\": \"ringing\"\n        }\n    ]\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "users",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/users",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "users",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"John Doe\",\r\n    \"email\": \"johndoe2025@gmail.com\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/users",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "users registration",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "\r\n// superadmin\r\n{\r\n    \"name\": \"Ahmad Fauzi\",\r\n    \"email\": \"adzi.fauziahmad@gmail.com\",\r\n    \"password\": \"qwerty123\",\r\n    \"confirmPassword\": \"qwerty123\",\r\n    \"userType\":\"user\"\r\n}\r\n\r\n// owner/staff\r\n// {\r\n//     \"name\": \"Jane Doe\",\r\n//     \"email\": \"janedoe2025@gmail.com\",\r\n//     \"password\": \"qwerty123\",\r\n//     \"confirmPassword\": \"qwerty123\",\r\n//     \"userType\":\"user\"\r\n// }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/users/registration",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"users",
+						"registration"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "users login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "\r\n// superadmin\r\n{\r\n    \"email\": \"adzi.fauziahmad@gmail.com\",\r\n    \"password\": \"kopidalgona123\"\r\n}\r\n\r\n// {\r\n//     \"email\": \"janedoe2025@gmail.com\",\r\n//     \"password\": \"qwerty123\"\r\n// }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/users/login",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"users",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "users logout",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "\r\n// superadmin\r\n{\r\n    \"email\": \"adzi.fauziahmad@gmail.com\",\r\n    \"password\": \"kopidalgona123\"\r\n}\r\n\r\n// {\r\n//     \"email\": \"janedoe2025@gmail.com\",\r\n//     \"password\": \"qwerty123\"\r\n// }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/users/logout",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"users",
+						"logout"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "guest register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "\r\n// superadmin\r\n{\r\n    \"name\": \"Kedonddong Air\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/guest/register",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"guest",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "email-test",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "\r\n// superadmin\r\n{\r\n    \"email\": \"muhamadhendrikbsns@gmail.com\",\r\n    \"name\": \"Dhani Maulana\"\r\n}\r\n\r\n// owner/staff\r\n// {\r\n//     \"name\": \"Jane Doe\",\r\n//     \"email\": \"janedoe2025@gmail.com\",\r\n//     \"password\": \"qwerty123\",\r\n//     \"confirmPassword\": \"qwerty123\",\r\n//     \"userType\":\"user\"\r\n// }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/test-email",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"test-email"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "forgot password",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "\r\n// superadmin\r\n{\r\n    \"email\": \"adzi.fauziahmad@gmail.com\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/forgot-password",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"forgot-password"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "reset password",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "\r\n// superadmin\r\n{\r\n    \"newPassword\": \"kopidalgona123\",\r\n    \"token\":\"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI1MjAzOTk2My0wMzk2LTQ0YzAtOWIxMC02Nzc0MGYxMDMyMjEiLCJlbWFpbCI6ImFkemkuZmF1emlhaG1hZEBnbWFpbC5jb20iLCJpYXQiOjE3NTk0MDE0OTUsImV4cCI6MTc1OTQwMjM5NX0.bHQN9VMlvI60-VIQdjtI5Dksw3xwTeC6QTjJ-MtQHXM\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/reset-password",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"reset-password"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
